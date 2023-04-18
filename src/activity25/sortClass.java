@@ -1,7 +1,7 @@
 package activity25;
 import java.util.Scanner;
 public class sortClass {
-
+//Bubble/merge sort
         public int[] getArray() {
             Scanner input = new Scanner(System.in);
             int[] arr = new int[5];

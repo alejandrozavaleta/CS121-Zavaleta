@@ -1,0 +1,37 @@
+package Activity35;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class StudentTest {
+
+    @Test
+    public void testGetNameAndID() {
+        // Create a student object with incorrect expected values
+        Student student = new Student("John", "Doe", 123456, "Computer Science", "Junior");
+
+        // Test getName() method
+        String expectedName = "Jane Doe"; // Incorrect expected value
+        String actualName = student.getName();
+        assertEquals(expectedName, actualName, "Failed for getName() method");
+
+        // Test getID() method
+        int expectedID = 654321; // Incorrect expected value
+        int actualID = student.getID();
+        assertEquals(expectedID, actualID, "Failed for getID() method");
+
+        // Update student object with correct expected values
+        student = new Student("Jane", "Doe", 654321, "Computer Science", "Junior");
+
+        // Test getName() method again with correct expected value
+        expectedName = "Jane Doe"; // Correct expected value
+        actualName = student.getName();
+        assertEquals(expectedName, actualName, "Failed for getName() method after updating student object");
+
+        // Test getID() method again with correct expected value
+        expectedID = 654321; // Correct expected value
+        actualID = student.getID();
+        assertEquals(expectedID, actualID, "Failed for getID() method after updating student object");
+    }
+}
+
